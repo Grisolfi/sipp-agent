@@ -4,16 +4,17 @@ jobs:
   pool:
       name: Default
       demands:
-        - agent.name -equals ec2-agent
+        - DOCKER_INSTALLED
   steps:
+      - bash: echo $DOCKER_INSTALLED
 #     - task: DockerInstaller@0
 #       displayName: Docker Installer
 #       inputs:
 #         dockerVersion: 17.09.0-ce
 #         releaseType: stable
-    - bash: curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
-    - bash: docker --version
-    - bash: docker info 
+#     - bash: curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
+#     - bash: docker --version
+#     - bash: docker info
 
 # - job: Flow_Appsec_Job
 #   # refs/heads/master should be changed to refs/heads/<target_branch>
@@ -24,7 +25,7 @@ jobs:
 #   pool:
 #       name: Default
 #       demands:
-#         - agent.name -equals ec2-agent
+#         - DOCKER_INSTALLED
 #   container:
 #     image: 'convisoappsec.azurecr.io/flowcli'
 #     endpoint: 'registry-service-connection'
