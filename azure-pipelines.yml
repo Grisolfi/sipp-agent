@@ -1,8 +1,11 @@
-  
-trigger:
-  - master  
+
 jobs:
 - job: Flow_Appsec_Job
+  branches:
+      include: 
+         - outro
+  workspace: 
+      clean: all
   pool:
       name: Default
       demands:
@@ -17,3 +20,4 @@ jobs:
     FLOW_API_INSECURE: 'true'
   steps:
     - bash: flow --help
+    
