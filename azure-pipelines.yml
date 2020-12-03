@@ -1,9 +1,7 @@
 
 jobs:
 - job: Flow_Appsec_Job
-  branches:
-      include: 
-         - outro
+  condition: eq(variables['build.sourceBranch'], 'refs/heads/outro')
   workspace: 
       clean: all
   pool:
