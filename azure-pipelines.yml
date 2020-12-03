@@ -11,6 +11,8 @@ jobs:
       inputs:
         dockerVersion: 17.09.0-ce
         releaseType: stable
+    - bash: docker --version
+    - bash: docker info 
 
 # - job: Flow_Appsec_Job
 #   # refs/heads/master should be changed to refs/heads/<target_branch>
