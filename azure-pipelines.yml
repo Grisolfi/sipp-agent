@@ -1,6 +1,6 @@
 
 jobs:
-- job: pre-conviso
+- job: pre_conviso
   pool:
       name: Default
       demands:
