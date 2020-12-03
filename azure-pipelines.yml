@@ -21,7 +21,7 @@ jobs:
     - task: DockerInstaller@0
       displayName: Docker Installer
       inputs:
-      dockerVersion: 19.03.6-ce
-      releaseType: stable
+        dockerVersion: 19.03.6-ce
+        releaseType: stable
     - bash: flow --help
     
