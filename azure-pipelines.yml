@@ -1,7 +1,7 @@
 
 jobs:
 - job: Flow_Appsec_Job
-  condition: eq(variables['build.sourceBranch'], 'refs/heads/outro')
+  condition: eq(variables['build.sourceBranch'], 'refs/heads/master')
   workspace: 
       clean: all
   pool:
