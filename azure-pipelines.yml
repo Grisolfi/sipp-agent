@@ -4,9 +4,9 @@ jobs:
   pool:
       name: Default
       demands:
-        -  DOCKER_ENABLED
+        -  JAVA_HOME
   steps:
-      - bash: echo $DOCKER_ENABLED
+      - bash: echo $JAVA_HOME
 #     - task: DockerInstaller@0
 #       displayName: Docker Installer
 #       inputs:
