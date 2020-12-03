@@ -4,9 +4,9 @@ jobs:
   pool:
       name: Default
       demands:
-        - DOCKER_INSTALLED
+        -  DOCKER_ENABLED
   steps:
-      - bash: echo $DOCKER_INSTALLED
+      - bash: echo $DOCKER_ENABLED
 #     - task: DockerInstaller@0
 #       displayName: Docker Installer
 #       inputs:
