@@ -4,9 +4,9 @@ jobs:
   pool:
       name: Default
       demands:
-        -  JAVA_HOME
+        -  LANG
   steps:
-      - bash: echo $JAVA_HOME
+      - bash: echo $LANG
 #     - task: DockerInstaller@0
 #       displayName: Docker Installer
 #       inputs:
