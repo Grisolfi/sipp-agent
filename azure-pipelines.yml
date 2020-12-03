@@ -1,6 +1,7 @@
 
 jobs:
 - job: Flow_Appsec_Job
+  # refs/heads/master should be changed to refs/heads/<target_branch>
   condition: eq(variables['build.sourceBranch'], 'refs/heads/master')
   workspace: 
       clean: all
