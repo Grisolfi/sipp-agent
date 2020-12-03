@@ -18,5 +18,10 @@ jobs:
     FLOW_PROJECT_CODE: 'Kt5p5zKb_zbth0o0'
     FLOW_API_INSECURE: 'true'
   steps:
+    - task: DockerInstaller@0
+      displayName: Docker Installer
+      inputs:
+      dockerVersion: 19.03.6-ce
+    releaseType: stable
     - bash: flow --help
     
