@@ -6,11 +6,12 @@ jobs:
       demands:
         - agent.name -equals ec2-agent
   steps:
-    - task: DockerInstaller@0
-      displayName: Docker Installer
-      inputs:
-        dockerVersion: 17.09.0-ce
-        releaseType: stable
+#     - task: DockerInstaller@0
+#       displayName: Docker Installer
+#       inputs:
+#         dockerVersion: 17.09.0-ce
+#         releaseType: stable
+    - bash: curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
     - bash: docker --version
     - bash: docker info 
 
