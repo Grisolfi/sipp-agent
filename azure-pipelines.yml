@@ -3,18 +3,15 @@ jobs:
 - job: pre_conviso
   pool:
       name: Default
-      demands:
-        -  LANG
   steps:
-      - bash: echo $LANG
 #     - task: DockerInstaller@0
 #       displayName: Docker Installer
 #       inputs:
 #         dockerVersion: 17.09.0-ce
 #         releaseType: stable
-#     - bash: curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
-#     - bash: docker --version
-#     - bash: docker info
+     - bash: curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
+     - bash: docker --version
+     - bash: docker info
 
 # - job: Flow_Appsec_Job
 #   # refs/heads/master should be changed to refs/heads/<target_branch>
@@ -25,7 +22,7 @@ jobs:
 #   pool:
 #       name: Default
 #       demands:
-#         - DOCKER_INSTALLED
+#         - DOCKER
 #   container:
 #     image: 'convisoappsec.azurecr.io/flowcli'
 #     endpoint: 'registry-service-connection'
