@@ -4,12 +4,12 @@ jobs:
   pool:
       name: Default
   steps:
-#     - task: DockerInstaller@0
-#       displayName: Docker Installer
-#       inputs:
-#         dockerVersion: 17.09.0-ce
-#         releaseType: stable
      - bash: curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
+     - task: DockerInstaller@0
+       displayName: Docker Installer
+       inputs:
+         dockerVersion: 17.09.0-ce
+         releaseType: stable
      - bash: docker --version
      - bash: docker info
 
